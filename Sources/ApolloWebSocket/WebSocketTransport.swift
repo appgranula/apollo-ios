@@ -151,7 +151,7 @@ public class WebSocketTransport: NetworkTransport, WebSocketDelegate {
     acked = false // need new connect and ack before sending
     
     if (reconnect) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {self.websocket?.connect()})
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {self.websocket.connect()})
     }
   }
   
